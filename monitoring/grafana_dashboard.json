@@ -1,0 +1,25 @@
+{
+  "dashboard": {
+    "title": "App Metrics",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Request Rate",
+        "targets": [
+          {
+            "expr": "rate(http_requests_total[5m])"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Error Rate",
+        "targets": [
+          {
+            "expr": "rate(http_errors_total[5m])"
+          }
+        ]
+      }
+    ]
+  }
+}
